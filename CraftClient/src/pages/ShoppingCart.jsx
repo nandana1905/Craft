@@ -8,16 +8,19 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 export default function ShoppingCart() {
+
+    const navigate = useNavigate()
 
     const [viewcart, setViewCart] = useState([])
 
     useEffect(() => {
-        
+
         const id = localStorage.getItem('loginId')
-        console.log('id====>',id);
-        
+        console.log('id====>', id);
+
         axios.get(`http://localhost:3005/api/cart/view_cart/${id}`).then((res) => {
             console.log('resCart====>', res.data.data);
             setViewCart(res.data.data)
@@ -66,7 +69,7 @@ export default function ShoppingCart() {
             setViewCart(DeleteCart)
 
         })
-        
+
     }
 
     const cartSubtotal = viewcart.reduce((acc, item) => acc + item.price * item.quantity, 0)
@@ -74,6 +77,10 @@ export default function ShoppingCart() {
     const discount = cartSubtotal * 0.06;
 
     const totalAfterDiscount = cartSubtotal - discount;
+
+    const checkout = () => {
+        navigate('/payment')
+    }
 
     return (
         <div>
@@ -132,7 +139,7 @@ export default function ShoppingCart() {
                     <p>
                         <span>Total</span> <span>Rs.{totalAfterDiscount.toFixed(2)}</span>
                     </p>
-                    <button>
+                    <button onClick={checkout}>
                         <i className="fa fa-shopping-cart" />
                         Checkout
                     </button>
@@ -140,7 +147,7 @@ export default function ShoppingCart() {
 
             </div>
 
-            
+
 
         </div>
     )

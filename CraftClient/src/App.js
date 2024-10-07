@@ -16,6 +16,7 @@ import ShoppingCart from './pages/ShoppingCart';
 import Wishlist from './pages/Wishlist';
 import OwnProductView from './pages/OwnProductView';
 import UserProfile from './pages/UserProfile';
+import Payment from './pages/Payment';
 
 
 
@@ -41,10 +42,8 @@ function App() {
         <Route path='/editprofile/:loginId' element={<EditProfile/>}/>
         <Route path='/ownproductview' element={<OwnProductView/>}/>
         <Route path='/userprofile' element={<UserProfile/>}/>
-        
-
-        
-        
+        <Route path='/payment' element={<Payment/>}/>
+              
       </Routes>
     </BrowserRouter>
   );

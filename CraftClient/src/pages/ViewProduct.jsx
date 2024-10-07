@@ -120,125 +120,135 @@ export default function ViewProduct() {
             {/* <h1 className='viewproduct-h1'>Product Details</h1> */}
 
 
-            <div className='category-button'>
+            <div className='allproductview'>
 
-                <button className='viewproduct-category-btn' onClick={() => { setCategory('All') }}>
-                    All Category
-                </button>
-                <button className='viewproduct-category-btn' onClick={() => { setCategory('Pottery_ArtWork') }}>
-                    Pottery Artwork
-                </button>
-                <button className='viewproduct-category-btn' onClick={() => { setCategory('ArtWork') }}>
-                    ArtWork
-                </button>
-                <button className='viewproduct-category-btn' onClick={() => { setCategory('Glass_ArtWork') }}>
-                    Glass ArtWork
-                </button>
-                <button className='viewproduct-category-btn' onClick={() => { setCategory('Embroidery_ArtWork') }}>
-                    Embroidery ArtWork
-                </button>
-                <button className='viewproduct-category-btn' onClick={() => { setCategory('Woodworking') }}>
-                    Woodworking
-                </button>
+                <div className='category-button'>
+
+                    <button className='viewproduct-category-btn' onClick={() => { setCategory('All') }}>
+                        All Category
+                    </button>
+                    <button className='viewproduct-category-btn' onClick={() => { setCategory('Pottery_ArtWork') }}>
+                        Pottery Artwork
+                    </button>
+                    <button className='viewproduct-category-btn' onClick={() => { setCategory('ArtWork') }}>
+                        ArtWork
+                    </button>
+                    <button className='viewproduct-category-btn' onClick={() => { setCategory('Glass_ArtWork') }}>
+                        Glass ArtWork
+                    </button>
+                    <button className='viewproduct-category-btn' onClick={() => { setCategory('Embroidery_ArtWork') }}>
+                        Embroidery ArtWork
+                    </button>
+                    <button className='viewproduct-category-btn' onClick={() => { setCategory('Woodworking') }}>
+                        Woodworking
+                    </button>
 
 
-            </div>
+                </div>
 
-            <div className='viewproduct'>
+                <div className='viewproduct'>
 
-                {Category == 'All' ?
-                    viewproduct.map((value, index) => (
-
-                        <div className="card-product-view">
-
-                            <div className='product-img'>
-                                <img src={value.product_img} style={{ borderRadius: '15px' }} alt="" height={400} width={400} />
-                                <div className='viewproduct-icon'>
-                                    {/* {wishlistProduct.filter((data) => {
-                                        return data.productId === value._id
-                                    })[0] ?
-
-                                        <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: '#ff0000' }}> </i>
-                                        :
-                                        <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: 'black' }}> </i>
-
-                                    } */}
-
-                                    <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: 'black' }}> </i>
-                                </div>
-                            </div>
-
-                            <div className="card__content">
-
-                                <p className="card__title">{value.product_name}</p>
-                                <p className="card__description">
-
-                                    <p style={{ color: 'black' }}>{value.description}</p>
-                                    <p style={{ color: 'black' }}>RS.{value.price}</p>
-                                    <p style={{ color: 'black' }}>Quantity : {value.quantity}</p>
-
-                                    <div className='viewproduct-button'>
-                                        {/* <button type='submit' onClick={() => { product_edit(value._id) }} className='viewproduct-button-edit'> Edit</button>
-                                        <button type='submit' onClick={() => { product_delete(value._id) }} className='viewproduct-button-delete'>Delete</button><br /> */}
-                                        <i onClick={() => { addCart(value._id) }} class="fa-solid fa-cart-shopping viewproduct_cart" style={{ fontSize: "210%" }} />
-
-                                        {wishlistProduct.filter((data) => {
-                                            return data.productId === value._id
-                                        })[0] ?
-
-                                            <i onClick={() => { addWishlist(value._id) }} class="fa-solid fa-heart i-viewproduct" style={{ fontSize: "210%", color: '#ff0000' }}> </i>
-                                            :
-                                            <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: 'black' }}> </i>
-
-                                        }
-
-                                    </div>
-
-                                </p>
-
-                            </div>
-                        </div>
-
-                    )) :
-
-                    viewproduct.filter((data) => { return Category == data.category })[0] ?
-                    viewproduct.filter((data) => { return Category == data.category }).map((value, index) => (
+                    {Category == 'All' ?
+                        viewproduct.map((value, index) => (
 
                             <div className="card-product-view">
 
                                 <div className='product-img'>
                                     <img src={value.product_img} style={{ borderRadius: '15px' }} alt="" height={400} width={400} />
                                     <div className='viewproduct-icon'>
-                                        <i class="fa-regular fa-heart i-viewproduct"> </i>
+                                        {/* {wishlistProduct.filter((data) => {
+                        return data.productId === value._id
+                    })[0] ?
+
+                        <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: '#ff0000' }}> </i>
+                        :
+                        <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: 'black' }}> </i>
+
+                    } */}
+
+                                        <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: 'black' }}> </i>
                                     </div>
                                 </div>
 
-                                <div className="card__content">
+                                <div className="card_content_viewproduct">
 
-                                    <p className="card__title">{value.product_name}</p>
-                                    <p className="card__description">
-
-
+                                    <p className="card_title_viewproduct">{value.product_name}</p>
+                                    <p className="card_description_viewproduct">
 
                                         <p style={{ color: 'black' }}>{value.description}</p>
                                         <p style={{ color: 'black' }}>RS.{value.price}</p>
                                         <p style={{ color: 'black' }}>Quantity : {value.quantity}</p>
 
                                         <div className='viewproduct-button'>
-                                            <button type='submit' onClick={() => { product_edit(value._id) }} className='viewproduct-button-edit'> Edit</button>
-                                            <button type='submit' onClick={() => { product_delete(value._id) }} className='viewproduct-button-delete'>Delete</button><br />
-                                            <button type='submit' className='viewproduct-button-addCart'>Add Cart</button>
-                                        </div>
+                                            <i onClick={() => { addCart(value._id) }} class="fa-solid fa-cart-shopping viewproduct_cart" style={{ fontSize: "210%" }} />
 
+                                            {wishlistProduct.filter((data) => {
+                                                return data.productId === value._id
+                                            })[0] ?
+
+                                                <i onClick={() => { addWishlist(value._id) }} class="fa-solid fa-heart i-viewproduct" style={{ fontSize: "210%", color: '#ff0000' }}> </i>
+                                                :
+                                                <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: 'black' }}> </i>
+
+                                            }
+
+                                        </div>
 
                                     </p>
 
                                 </div>
                             </div>
-                        ))
-                        :
-                        <h1>This category is empty</h1>
-                }
+
+                        )) :
+
+                        viewproduct.filter((data) => { return Category == data.category })[0] ?
+                            viewproduct.filter((data) => { return Category == data.category }).map((value, index) => (
+
+                                <div className="card-product-view">
+
+                                    <div className='product-img'>
+                                        <img src={value.product_img} style={{ borderRadius: '15px' }} alt="" height={400} width={400} />
+                                        <div className='viewproduct-icon'>
+                                            <i class="fa-regular fa-heart i-viewproduct"> </i>
+                                        </div>
+                                    </div>
+
+                                    <div className="card_content_viewproduct">
+
+                                        <p className="card_title_viewproduct">{value.product_name}</p>
+                                        <p className="card_description_viewproduct">
+
+
+
+                                            <p style={{ color: 'black' }}>{value.description}</p>
+                                            <p style={{ color: 'black' }}>RS.{value.price}</p>
+                                            <p style={{ color: 'black' }}>Quantity : {value.quantity}</p>
+
+                                            <div className='viewproduct-button'>
+                                                <i onClick={() => { addCart(value._id) }} class="fa-solid fa-cart-shopping viewproduct_cart" style={{ fontSize: "210%" }} />
+
+                                                {wishlistProduct.filter((data) => {
+                                                    return data.productId === value._id
+                                                })[0] ?
+
+                                                    <i onClick={() => { addWishlist(value._id) }} class="fa-solid fa-heart i-viewproduct" style={{ fontSize: "210%", color: '#ff0000' }}> </i>
+                                                    :
+                                                    <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: 'black' }}> </i>
+
+                                                }
+
+                                            </div>
+
+                                        </p>
+
+                                    </div>
+                                </div>
+                            ))
+                            :
+                            <h1 className='allproduct-h1'>This category is empty</h1>
+                    }
+                </div>
+
             </div>
 
 

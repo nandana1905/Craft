@@ -1,0 +1,246 @@
+/* .usercard{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.cookieCard {
+    width: 360px;
+    height:310px;
+    background: linear-gradient(to right,rgb(137, 104, 255),rgb(175, 152, 255));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    
+   
+  }
+  
+  .cookieCard::before {
+    width: 175px;
+    height: 175px;
+    content: "";
+    background: linear-gradient(to right,rgb(142, 110, 255),rgb(145, 128, 203));
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    right: -25%;
+    top: -25%;
+  }
+ 
+  .cookieHeading {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(241, 241, 241);
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .cookieDescription {
+    font-size: 0.9em;
+    color: rgb(241, 241, 241);
+    z-index: 2;
+    text-align: center;
+
+  }
+  
+  .cookieDescription a {
+    color: rgb(241, 241, 241);
+  }
+
+  
+  
+  .acceptButton {
+    padding: 11px 20px;
+    background-color: #7b57ff;
+    transition-duration: .2s;
+    border: none;
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 2;
+    width: 100px;
+    margin: 5px;
+    
+  }
+  
+  .acceptButton:hover {
+    background-color: #714aff;
+    transition-duration: .2s;
+  } */
+
+.userprofile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: white;
+    border-radius: 32px;
+    box-shadow: #604b4a30 0px 70px 30px -50px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.user-card .profile-pic {
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    top: 3px;
+    left: 3px;
+    border-radius: 29px;
+    z-index: 1;
+    border: 0px solid #1797b8;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+
+.user-card .profile-pic img {
+    /* -o-object-fit: cover; */
+    /* object-fit: cover; */
+    width: 100%;
+    height: 100%;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.user-card .profile-pic svg {
+    width: 100%;
+    height: 100%;
+    /* -o-object-fit: cover; */
+    /* object-fit: cover; */
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transform-origin: 45% 20%;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.user-card .bottom {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background: #1797b8;
+    top: 80%;
+    border-radius: 29px;
+    z-index: 2;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.user-card .bottom .content {
+    position: absolute;
+    text-align: center;
+
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 185px;
+}
+
+.user-card .bottom .content .name {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.user-card .bottom .content .about-me {
+    display: block;
+    font-size: 0.9rem;
+    color: white;
+
+}
+
+.user-card .bottom .bottom-bottom {
+    position: absolute;
+    bottom: 9px;
+    left: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.user-card .bottom .bottom-bottom .button {
+    background: white;
+    color: #1797b8;
+    border: none;
+    height: 30px;
+    margin: 10px;
+    margin-top: 1%;
+    width: 75px;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 0.4rem 0.6rem;
+    box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
+}
+
+.user-card .bottom .bottom-bottom .button:hover {
+    background: #FFD700;
+    color: black;
+}
+
+.user-card:hover {
+    border-top-left-radius: 55px;
+}
+
+.user-card:hover .bottom {
+    top: 20%;
+    border-radius: 80px 29px 29px 29px;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.user-card:hover .profile-pic {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    top: 30px;
+    left: -6px;
+    border-radius: 50%;
+    z-index: 3;
+    border: 7px solid #1797b8;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+    transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+
+.user-card:hover .profile-pic:hover {
+    transform: scale(1.3);
+    border-radius: 0px;
+}
+
+.user-card:hover .profile-pic img {
+    transform: scale(2.5);
+    -o-object-position: 0px 25px;
+    object-position: 0px 25px;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+
+.user-card:hover .profile-pic svg {
+    transform: scale(2.5);
+    transition: all 0.5s ease-in-out 0.5s;
+}

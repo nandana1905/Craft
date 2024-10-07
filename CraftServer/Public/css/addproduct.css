@@ -1,0 +1,95 @@
+.addproduct-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/Public/img/craft1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.addproduct-wapper {
+    width: 750px;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 20px;
+    color: black;
+    padding:40px 35px 55px ;
+}
+
+.addproduct-wapper h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.addproduct-input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+
+.addproduct-input-box .addproduct-input-field {
+    position: relative;
+    width: 48%;
+    height: 50px;
+    margin: 13px 0;
+}
+
+.addproduct-input-box .addproduct-input-field input{
+    width: 97%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid black;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    border-radius: 6px;
+}
+
+.addproduct-input-box .addproduct-input-field input::placeholder{
+    color:black;
+    font-size: 18px;
+}
+
+.addproduct-wapper .addproduct-btn{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    color: white;
+    margin-top: 3%;
+    font-size: 20px;
+}
+
+.addproduct-input-box .addproduct-input-file input{
+    width: 97%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid black;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    border-radius: 6px;
+}
+
+.addproduct-input-box .addproduct-input-file input::placeholder{
+    color:black;
+    font-size: 18px;
+}
+
+.addproduct-input-file{
+    background: transparent;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 95%;
+    height: 100%;
+    padding: 2%;
+}
+ 

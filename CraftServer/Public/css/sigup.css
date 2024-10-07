@@ -1,0 +1,144 @@
+.reg_body {
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('/Public/img/login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-reg {
+    max-width: 705px;
+    width: 100%;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1),
+        0px 5px 12px -2px rgba(0, 0, 0, 0.1),
+        0px 18px 36px -6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    
+}
+
+.container-reg .title {
+    padding: 20px;
+
+}
+
+.container-reg .title .p-reg {
+    font-size: 25px;
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.container-reg .title .p-reg::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 132px;
+    height: 3px;
+    background: linear-gradient(to right, #2d0b00, #00093c);
+}
+
+.user_details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    color: white;
+}
+
+.input-box-reg {
+    width: calc(50% - 20px);
+    /* Adjusted to properly divide two columns */
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.input-box-reg .input-reg {
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 0 0 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+    transition: all 120ms ease-out 0s;
+}
+
+.input-box-reg label{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.mb-3 {
+    display: flex;
+    justify-content: center;
+}
+
+
+.file-reg {
+    width: 80% !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+.reg_btn {
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    height: 45px;
+    outline: none;
+    width: 80%;
+    color: black;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.reg_btn:hover {
+    /* box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2); */
+    content: "";
+    color: #fff;
+    width: 80%;
+    border-radius: 40px;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.reg-button{
+    display: flex;
+    justify-content: center;
+}
+
+.para-reg {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    margin-top: 10px;
+}
+
+.para-reg a {
+    font-weight: 700;
+    /* font-size: 19px; */
+    background: linear-gradient(to right,#2d0b00, #00093c);
+    -webkit-background-clip: text;
+    color: transparent;
+}

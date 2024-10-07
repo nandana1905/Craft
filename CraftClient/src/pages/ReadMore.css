@@ -1,0 +1,134 @@
+.readmore-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card {
+    width: 80vw;
+    background: #FFDB58;
+    transition: 1s ease-in-out;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h1 {
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+}
+
+.readmore-details {
+    margin-top: 3%;
+}
+
+.card .info {
+    font-weight: 400;
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    margin: 1em;
+    text-transform: uppercase;
+}
+
+.card .info-email {
+    font-weight: 400;
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    margin: 1em;
+}
+
+.card .img-readmore {
+
+    width: 275px;
+    height: 265px;
+    border-radius: 15px;
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+.btn-readmore {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card button {
+    /* padding: 0.8em 1.7em;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: .4s ease-in-out; */
+    border: none;
+    width: 50%;
+    height: 35px;
+    background-color: white;
+
+}
+
+.card button:hover {
+    background-color: rgb(247, 234, 234);
+}
+
+
+/* ********* PRODUCTS VIEW ************* */
+
+.card-admin-userproduct-view {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 400px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+        -4px -4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width:372px) {
+
+    .card {
+        width: 100vw;
+        background: #FFDB58;
+        transition: 1s ease-in-out;
+        clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card .img-readmore {
+
+        width: 275px;
+        height: 265px;
+        border-radius: 15px;
+        margin-top: 8%;
+        margin-bottom: 6%;
+    }
+
+}

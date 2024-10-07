@@ -1,0 +1,187 @@
+.wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    
+}
+
+.wrapper h1 {
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.project {
+    display: flex;
+}
+
+.shop {
+    flex: 75%;
+}
+
+.box-cart {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    /* align-items: center; */
+    margin-bottom: 20px;
+    background: #fff;
+    transition: all .6s ease;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.box-cart:hover {
+    border: none;
+    transform: scale(1.01);
+}
+
+.content {
+    font-size: 20px;
+    padding: 25px;
+    font-weight: 500;
+}
+
+.img-cart {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cart-p {
+    margin-top: 0px;
+}
+
+.row-col-cart {
+    display: grid;
+    width: 100%;
+}
+
+.cart-row {
+    width: 100%;
+    margin-top: 3%;
+    margin-left: 1%;
+
+}
+
+.col-cart {
+    margin-top: 3%;
+    font-weight: 500;
+    margin-left: 5%;
+}
+
+.right-bar {
+    flex: 25%;
+    margin: 0 auto; /* Center the right-bar */
+    padding: 20px;
+    height: 315px;
+    width: 80%;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.right-bar hr {
+    margin-bottom: 25px;
+}
+
+.right-bar p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.right-bar button {
+    background-color: #76bfb6;
+    color: #fff;
+    outline: none;
+    border: none;
+    width: 90%;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+.right-bar i {
+    margin-right: 15px;
+}
+
+.right-bar button:hover {
+    background-color: #3972a7;
+}
+
+
+
+.col-cart-btn{
+    margin-top: 25%;
+}
+
+
+
+/* 
+.content {
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.content h3 {
+    margin-bottom: 30px;
+}
+
+.content h4 {
+    margin-bottom: 50px;
+}
+
+
+
+/* 
+@media screen and (max-width: 372px) {
+    .content h3 {
+        margin-bottom: 15px;
+    }
+
+    .content h4 {
+        margin-bottom: 20px;
+    }
+
+    .btn2 {
+        display: none;
+    }
+
+    .box-cart {
+        width: 100%;
+        height: 300px;
+    }
+
+    .box-cart img {
+        height: 150px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .right-bar {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .wrapper {
+        max-width: 95%;
+    }
+} */

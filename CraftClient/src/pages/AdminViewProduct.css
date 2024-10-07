@@ -1,0 +1,158 @@
+.admin-product-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.card-admin-product-view {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 600px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+        -4px -4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-admin-product-view:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+        -4px -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-container {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background-color: rgb(165, 165, 165);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-icon {
+    font-size: 40px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 17px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: #1797b8;
+    cursor: default;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    text-transform: uppercase;
+    padding: 1%;
+}
+
+.card-des {
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    margin: 0;
+    font-size: 13px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #1797b8;
+    cursor: default;
+    text-transform: uppercase;
+    padding: 1%;
+}
+
+.adminproduct-button {
+    padding: 5%;
+}
+
+.adminproduct {
+    padding: 11px 20px;
+    background-color: #1797b8;
+    transition-duration: .2s;
+    border: none;
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 2;
+    width: 100px;
+    margin: 10px;
+}
+
+.adminproduct:hover {
+    background-color: #1797b8;
+    transition-duration: .2s;
+}
+
+.card-more {
+    color: white;
+}
+
+/* From Uiverse.io by joe-watson-sbf */
+.btn-read-more {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 7px;
+    color: #ffedd3;
+    margin-top: 5%;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn-read-more::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #1797b8;
+    transition: 0.5s ease;
+}
+
+.btn-read-more:hover {
+    color: #fff;
+    transition-delay: 0.5s;
+}
+
+.btn-read-more:hover::before {
+    width: 100%;
+}
+
+.btn-read-more::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #1797b8;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+.btn-read-more:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}

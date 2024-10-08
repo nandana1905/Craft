@@ -25,6 +25,9 @@ export default function ShoppingCart() {
             console.log('resCart====>', res.data.data);
             setViewCart(res.data.data)
 
+        }).catch((error) => {
+            console.log('error====>', error);
+            toast.error(error.response.data.message)
         })
 
     }, [])
@@ -40,6 +43,9 @@ export default function ShoppingCart() {
                 return value
             })
             setViewCart(filterIncrement)
+        }).catch((error) => {
+            console.log('error====>', error);
+            toast.error(error.response.data.message)
         })
     }
 
@@ -54,6 +60,10 @@ export default function ShoppingCart() {
                 return value
             })
             setViewCart(filterDecrement)
+
+        }).catch((error) => {
+            console.log('error====>', error);
+            toast.error(error.response.data.message)
         })
     }
 
@@ -68,6 +78,9 @@ export default function ShoppingCart() {
             })
             setViewCart(DeleteCart)
 
+        }).catch((error) => {
+            console.log('error====>', error);
+            toast.error(error.response.data.message)
         })
 
     }

@@ -109,7 +109,7 @@ export default function Login() {
                             </div>
 
                             <div className="two">
-                                <label className="label-login"><a href="#">Forgot Password?</a></label>
+                                <label className="label-login"><a href="/forgotpassword">Forgot Password?</a></label>
                             </div>
 
                         </div>

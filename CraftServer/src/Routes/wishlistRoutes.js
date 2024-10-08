@@ -43,7 +43,7 @@ wishlistRoutes.post('/add_wishlist', async (req, res) => {
             }
 
             const addData = await wishlistSchema(wishlistData).save()
-            console.log('addDataWishlist==>', addData);
+            // console.log('addDataWishlist==>', addData);
 
             if (addData) {
                 return res.status(200).json({
@@ -78,7 +78,7 @@ wishlistRoutes.post('/add_wishlist', async (req, res) => {
 
 wishlistRoutes.get('/view_wishlist/:id', async (req, res) => {
     const id = req.params.id
-    console.log('wishid====>', id);
+    // console.log('wishid====>', id);
 
 
     try {

@@ -28,6 +28,9 @@ export default function OwnProductView() {
         }).then((res) => {
             console.log('res=====>', res.data.data);
             setOwnproduct(res.data.data)
+        }).catch((error) => {
+            console.log('error====>', error);
+            toast.error(error.response.data.message)
         })
 
     }, [])

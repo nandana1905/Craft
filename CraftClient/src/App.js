@@ -17,6 +17,9 @@ import Wishlist from './pages/Wishlist';
 import OwnProductView from './pages/OwnProductView';
 import UserProfile from './pages/UserProfile';
 import Payment from './pages/Payment';
+import ForgotPassword from './pages/ForgotPassword';
+import Verification from './pages/Verification';
+import SetNewPassword from './pages/SetNewPassowrd';
 
 
 
@@ -43,6 +46,9 @@ function App() {
         <Route path='/ownproductview' element={<OwnProductView/>}/>
         <Route path='/userprofile' element={<UserProfile/>}/>
         <Route path='/payment' element={<Payment/>}/>
+        <Route path='/forgotpassword' element={<ForgotPassword/>}/>
+        <Route path='/verification' element={<Verification/>}/>
+        <Route path='/newPassword' element={<SetNewPassword/>}/>
               
       </Routes>
     </BrowserRouter>

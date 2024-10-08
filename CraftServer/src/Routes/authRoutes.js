@@ -5,12 +5,25 @@ const loginSchema = require('../Models/loginSchema')
 
 const cloudinary = require('cloudinary').v2
 const { CloudinaryStorage } = require('multer-storage-cloudinary')
-const multer = require('multer')
+
 
 const jwt = require('jsonwebtoken')
+const nodemailer = require("nodemailer");
+
+const multer = require('multer')
 
 require('dotenv').config()
 
+const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+        user: "nandanadev30@gmail.com",
+        pass: "jdbincobqmlwlxdh",
+    },
+});
 
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
@@ -62,6 +75,7 @@ authRoutes.post('/user_register', upload.single('user_img'), async (req, res) =>
 
             const regsiter = await userSchema(data).save()
 
+            console.log("register==>", regsiter);
 
             if (regsiter) {
 
@@ -161,7 +175,61 @@ authRoutes.post('/login_check', async (req, res) => {
     }
 })
 
+// ********** SET NEW PASSWORD ************
 
+authRoutes.post('/email_verification', async (req, res) => {
+    try {
+        const data = await loginSchema.findOne({ email: req.body.email })
+        if (!data) {
+            return res.status(400).json({
+                success: false,
+                error: true,
+                message: "You are not registered with us"
+            })
+        } else {
+
+            var val = Math.floor(1000 + Math.random() * 9000);
+            console.log(val);//creating random 4 digit number
+
+            const mailOptions = {
+                from: "craft@gmail.com",
+                to: req.body.email,
+                subject: "OTP-verification",
+                text: (`Your One Time Password ${val}`),
+
+            };
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    console.error("Error sending email: ", error);
+                    return res.status(400).json({
+                        success: false,
+                        error: true,
+                        message: "Error sending email: ",
+                        errorMessage: error
+                    })
+
+                } else {
+                    console.log("Email sent: ", info.response);
+                    return res.status(200).json({
+                        success: true,
+                        error: false,
+                        message: 'Email sent:',
+                        otp: val,
+                        email: req.body.email
+                    })
+                }
+            });
+
+        }
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            error: true,
+            message: "Internal server error ",
+            errorMessage: error
+        })
+    }
+})
 
 
 

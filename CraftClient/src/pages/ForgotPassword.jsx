@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import './password.css'
+import './ForgotPassword.css'
 import { useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+
 
 
 
@@ -38,7 +39,8 @@ export default function ForgotPassword() {
         }
         axios.post(`http://localhost:3005/api/auth/email_verification`, input).then((res) => {
             console.log(res.data.message);
-            console.log('forget====>', res);
+
+            console.log('ForgetPassword====>', res);
 
 
             localStorage.setItem('email', res.data.email)
@@ -134,8 +136,7 @@ export default function ForgotPassword() {
                                                 id="token"
                                                 defaultValue=""
                                             />
-                                            <div onClick={back}>Back to login<br></br><i class="fa fa-arrow-left" ></i></div>
-                                        </form>
+                                            <div onClick={back} style={{ cursor: 'pointer' }}><i class="fa fa-arrow-left" /> Back to login</div>                                        </form>
                                     </div>
                                 </div>
                             </div>

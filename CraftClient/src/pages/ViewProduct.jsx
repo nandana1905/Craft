@@ -151,7 +151,7 @@ export default function ViewProduct() {
                     {Category == 'All' ?
                         viewproduct.map((value, index) => (
 
-                            <div className="card-product-view">
+                            <div className="card-product-view" data-aos="zoom-out-up">
 
                                 <div className='product-img'>
                                     <img src={value.product_img} style={{ borderRadius: '15px' }} alt="" height={400} width={400} />

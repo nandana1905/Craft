@@ -231,8 +231,48 @@ authRoutes.post('/email_verification', async (req, res) => {
     }
 })
 
+// ********* PASSWORD UPDATE **********
 
+authRoutes.post('/password_update', async (req, res) => {
 
+    try {
+
+        const data = {
+            password: req.body.password
+        }
+        console.log('dataPassword====>',req.body.password);
+
+        const newData = await loginSchema.updateOne(
+            { email: req.body.email }, 
+            { $set: data }     
+        );
+        
+
+        if (newData.modifiedCount == 1) {
+            return res.status(200).json({
+                succes: true,
+                error: false,
+                data: newData,
+                message: 'Password successfully update '
+            })
+        } else {
+            return res.status(400).json({
+                sucess: false,
+                error: true,
+                message: 'Password fail to update '
+            })
+        }
+
+    } catch (error) {
+        res.status(500).json({
+            succes: false,
+            error: true,
+            message: 'internal server error',
+            errorMessage: error
+        })
+    }
+
+})
 
 
 

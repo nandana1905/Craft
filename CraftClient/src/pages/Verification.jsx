@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import './verification.css'
+import './Verification.css'
 import { useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast'
 
 
 
@@ -10,8 +11,21 @@ import axios from 'axios';
 export default function Verification() {
 
     const [verification, setVerification] = useState('')
+    const [otp, setOtp] = useState('')
+    console.log("state==>", otp);
+
+
+
+    const inputChange = (event) => {
+
+        const value = event.target.value
+        setOtp(otp + value)
+
+    }
 
     const email = (localStorage.getItem('email'))
+    const OTP = (localStorage.getItem('OTP'))
+
 
     const navigate = useNavigate()
 
@@ -19,27 +33,46 @@ export default function Verification() {
         navigate('/login')
     }
 
-    const submit = () => {
-        navigate('/newPassword')
+    const submit = (event) => {
+
+        event.preventDefault()
+        console.log('stateOTP====>', otp);
+        console.log('OTP====>', OTP);
+
+        if (otp == OTP) {
+
+            navigate('/newPassword')
+
+        } else {
+
+            console.log('Verification is Failed');
+            toast.error('Verification is Failed')
+
+        }
+
     }
 
-    const resent = () => {
+    const resend = (event) => {
 
-        axios.post(`http://localhost:3005/api/auth/email_verification`, verification).then((res) => {
+        const data = {
+            email: localStorage.getItem('email')
+        }
+
+        axios.post(`http://localhost:3005/api/auth/email_verification`, data).then((res) => {
             console.log(res.data.message);
-            console.log('resend====>', res);
+            toast.success(res.data.message)
+            console.log('ForgetPassword====>', res);
 
+            localStorage.setItem('OTP', res.data.otp)
 
-           localStorage.getItem('email')
-           localStorage.getItem('OTP')
+            navigate('/verification')
+
 
         }).catch((error) => {
             console.log('error====>', error);
-            // toast.error(error.response.data.message)
         })
 
     }
-
     return (
         <>
             <link
@@ -50,7 +83,7 @@ export default function Verification() {
                 href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
                 rel="stylesheet"
             />
-
+            <Toaster />
             <div className="form-gap" />
             <div className="container-forgot">
                 <div className="row-forgot">
@@ -68,10 +101,10 @@ export default function Verification() {
                                     </p>
                                     <div className="panel-body">
                                         <div className="d-flex flex-row mt-5" style={{ display: "flex", textAlign: "center", justifyContent: "center", flexWrap: "wrap" }}>
-                                            <input type="text" className="form-control" style={{ height: "50px", width: "80px" }} autofocus="" />
-                                            <input type="text" className="form-control" style={{ height: "50px", width: "80px" }} />
-                                            <input type="text" className="form-control" style={{ height: "50px", width: "80px" }} />
-                                            <input type="text" className="form-control" style={{ height: "50px", width: "80px" }} />
+                                            <input type="text" className="form-control" style={{ height: "50px", width: "80px" }} autofocus="" onChange={inputChange} />
+                                            <input type="text" className="form-control" style={{ height: "50px", width: "80px" }} onChange={inputChange} />
+                                            <input type="text" className="form-control" style={{ height: "50px", width: "80px" }} onChange={inputChange} />
+                                            <input type="text" className="form-control" style={{ height: "50px", width: "80px" }} onChange={inputChange} />
                                         </div>
                                         <form
                                             id="register-form"
@@ -83,7 +116,7 @@ export default function Verification() {
 
                                             <div className="text-center mt-5">
                                                 <span className="d-block mobile-text">Don't receive the code?</span>
-                                                <span className="font-weight-bold text-danger cursor" onClick={resent} >Resend</span>
+                                                <span className="font-weight-bold text-danger cursor" onClick={resend} >Resend</span>
                                             </div>
                                             <div className="form-group d-grid">
                                                 <Button variant="success" onClick={submit} >Verify OTP</Button>
@@ -95,7 +128,7 @@ export default function Verification() {
                                                 id="token"
                                                 defaultValue=""
                                             />
-                                            <div onClick={back}>Back to login<br></br><i class="fa fa-arrow-left" ></i></div>
+                                            <div onClick={back} style={{cursor:'pointer'}}><i class="fa fa-arrow-left" /> Back to login</div>
                                         </form>
                                     </div>
                                 </div>

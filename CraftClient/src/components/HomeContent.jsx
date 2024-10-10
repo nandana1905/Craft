@@ -23,9 +23,12 @@ export default function HomeContent() {
 
     return (
         <div>
+
+           
+
             <div className='homecontent-body'>
                 <div className="homecontent-contianer">
-                    <div className="homecontent-block">
+                    <div className="homecontent-block" >
                         <div className="homecontent-img">
                             <img src="/img/pottery1.jpg" alt="" />
                         </div>
@@ -104,6 +107,9 @@ export default function HomeContent() {
                 </div>
 
             </div>
+
+      
+
         </div>
     )
 }

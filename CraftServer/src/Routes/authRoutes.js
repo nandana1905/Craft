@@ -82,7 +82,7 @@ authRoutes.post('/user_register', upload.single('user_img'), async (req, res) =>
                 return res.status(200).json({
                     succes: true,
                     error: false,
-                    message: 'Data added sucessfully'
+                    message: 'Registration sucessfully'
                 })
             } else {
                 return res.status(400).json({

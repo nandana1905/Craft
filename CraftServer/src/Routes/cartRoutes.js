@@ -56,13 +56,13 @@ cartRoutes.post('/add_cart', async (req, res) => {
                 return res.status(200).json({
                     succes: true,
                     error: false,
-                    message: 'Data successfully added'
+                    message: 'Product successfully added'
                 })
             } else {
                 return res.status(400).json({
                     succes: false,
                     error: true,
-                    message: 'Data adding failed'
+                    message: 'Product adding failed'
                 })
             }
 
@@ -139,13 +139,13 @@ cartRoutes.get('/view_cart/:id', async (req, res) => {
                 succes: true,
                 error: false,
                 data: viewCart,
-                message: 'Data viewed sucessfully'
+                message: 'Product viewed sucessfully'
             })
         } else {
             return res.status(400).json({
                 sucess: false,
                 error: true,
-                message: 'Data cannot viwed'
+                message: 'Product cannot viwed'
             })
         }
     } catch (error) {
@@ -281,15 +281,6 @@ cartRoutes.post('/quantity_decremented/:id', async (req, res) => {
     }
 
 })
-
-
-
-
-
-
-
-
-
 
 
 module.exports = cartRoutes

@@ -52,13 +52,13 @@ console.log("productdata==>",productData);
             return res.status(200).json({
                 succes: true,
                 error: false,
-                message: 'Data successfully added'
+                message: 'Product successfully added'
             })
         } else {
             return res.status(400).json({
                 succes: false,
                 error: true,
-                message: 'Data adding failed'
+                message: 'Product adding failed'
             })
         }
     } catch (error) {
@@ -87,13 +87,13 @@ produtRoutes.get('/product_view', async (req, res) => {
                 sucess: true,
                 error: false,
                 data: viewproduct,
-                message: 'Data viewed sucessfully'
+                message: 'Product viewed sucessfully'
             })
         } else {
             res.status(400).json({
                 sucess: false,
                 error: true,
-                message: 'Data cannot viwed'
+                message: 'Product cannot viwed'
             })
         }
     } catch (error) {
@@ -126,13 +126,13 @@ produtRoutes.post('/product_edit/:id', upload.single('product_img'), async (req,
                 succes: true,
                 error: false,
                 data: oldData,
-                message: 'Successfully update data'
+                message: 'Successfully update Product'
             })
         } else {
             return res.status(400).json({
                 sucess: false,
                 error: true,
-                message: 'Fail to update data'
+                message: 'Fail to update Product'
             })
         }
     } catch (error) {
@@ -158,13 +158,13 @@ produtRoutes.post('/delete_product/:id', async (req, res) => {
                 succes: true,
                 error: false,
                 data: delData,
-                message: 'Successfully delete data'
+                message: 'Successfully delete Product'
             })
         } else {
             return res.status(400).json({
                 succes: false,
                 error: true,
-                message: "Data cannot delete"
+                message: "Product cannot delete"
             })
         }
     } catch (error) {
@@ -194,13 +194,13 @@ produtRoutes.get('/single_product_view/:id', async (req, res) => {
                 sucess: true,
                 error: false,
                 data: singleProductView,
-                message: 'Data viewed sucessfully'
+                message: 'Product viewed sucessfully'
             })
         } else {
             return res.status(400).json({
                 sucess: false,
                 error: true,
-                message: 'Data cannot viwedddddddddd'
+                message: 'Product cannot viwed'
             })
         }
     } catch (error) {

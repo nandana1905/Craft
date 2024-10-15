@@ -2,6 +2,17 @@
     max-width: 90%;
     margin-top: 50%;
     margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.homecontent-h2{
+     font-weight: 700;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .homecontent-contianer .homecontent-block {

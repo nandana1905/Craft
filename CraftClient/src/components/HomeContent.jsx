@@ -28,6 +28,7 @@ export default function HomeContent() {
 
             <div className='homecontent-body'>
                 <div className="homecontent-contianer">
+                    <h2 className='homecontent-h2'>Popular Categories</h2>
                     <div className="homecontent-block" >
                         <div className="homecontent-img">
                             <img src="/img/pottery1.jpg" alt="" />

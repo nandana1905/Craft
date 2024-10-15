@@ -36,7 +36,7 @@
 
 .card-body {
     padding: 0 5rem 5rem 5rem;
-    background-image: url('/public/img/payment.jpg');
+    background: linear-gradient(to right, #CA9703, #964B00);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -53,9 +53,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .card-top {

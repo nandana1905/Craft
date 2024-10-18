@@ -20,6 +20,7 @@ import Payment from './pages/Payment';
 import ForgotPassword from './pages/ForgotPassword';
 import Verification from './pages/Verification';
 import SetNewPassword from './pages/SetNewPassowrd';
+import NavBar from './components/NavBar';
 
 
 
@@ -29,6 +30,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         
+        <Route path='/navbar' element={<NavBar />} />
         <Route path='/' element={<Homepage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />

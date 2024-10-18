@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Verification.css'
+import './verification.css'
 import { useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';

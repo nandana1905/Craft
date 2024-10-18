@@ -21,7 +21,7 @@ export default function ReadMore() {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3005/api/user/single_user_view/${loginId}`).then((res) => {
+        axios.get(`http://localhost:3005/api/admin//admin_single_user_view/${loginId}`).then((res) => {
             console.log('res=====>', res.data);
             setUserdetail(res.data)
 
@@ -61,7 +61,7 @@ export default function ReadMore() {
 
 
 
-                <div className="card">
+                <div className="card-adminproduct">
                     <img src={userdetail?.data?.user_img} className='img-readmore' />
                     <h1>{userdetail?.data?.name}</h1>
 
@@ -97,32 +97,26 @@ export default function ReadMore() {
                             ))}
                         </div>
                         :
-                            <div className='readmore-details' >
+                        // <div className='readmore-details' >
+                        //     <p className="info-email">EMAIL : {userdetail?.data?.loginId?.email}</p>
+                        //     <p className="info">Address : {userdetail?.data?.address}</p>
+                        //     <p className="info">Phone : {userdetail?.data?.phone}</p>
+                        //     <p className="info">Age : {userdetail?.data?.age}</p>
+                        // </div>
+
+                        <div className="card-readmore-details">
+                            <div className="bg-readmore-details">
                                 <p className="info-email">EMAIL : {userdetail?.data?.loginId?.email}</p>
                                 <p className="info">Address : {userdetail?.data?.address}</p>
                                 <p className="info">Phone : {userdetail?.data?.phone}</p>
                                 <p className="info">Age : {userdetail?.data?.age}</p>
                             </div>
-                            
+                            <div className="blob-readmore-details"></div>
+                        </div>
+
                     }
-
-
-
-
-
-
                 </div>
-
-
-
-
-
-
-
             </div>
-
-
-
         </div >
     )
 }

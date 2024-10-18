@@ -7,12 +7,15 @@
     flex-direction: column;
 }
 
-.homecontent-h2{
-     font-weight: 700;
+.homecontent-h2 {
+    font-weight: 700;
     font-size: 30px;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 .homecontent-contianer .homecontent-block {
@@ -115,6 +118,20 @@
         text-transform: uppercase;
     }
 
+    .homecontent-h2 {
+        font-weight: 700;
+        font-size: 30px;
+        color: black;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px 0;
+
+    }
+
     .homecontent-contianer .homecontent-block .homecontent-content p {
         font-size: 30px;
     }
@@ -142,9 +159,11 @@
 
     .homecontent-contianer {
         max-width: 90%;
-        margin-top: 130%;
+        margin-top: 155%;
         margin-left: 5%;
     }
+
+
 
     .homecontent-contianer .homecontent-block .homecontent-img {
         flex: 0 0 auto;

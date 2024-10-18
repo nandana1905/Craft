@@ -8,6 +8,44 @@ const adminRoutes = express.Router()
 
 // ************** USER ******************
 
+// ************** SINGLE VIEW USER PROFILE *************
+
+adminRoutes.get('/admin_single_user_view/:id',async (req, res) => {
+    try {
+        const id = req.params.id
+        // console.log('singleuserid===>', id);
+
+        const singleUserView = await userSchema.findOne({ loginId: id }).populate('loginId')
+
+        // console.log('singleUserView===>', singleUserView);
+
+
+        if (singleUserView) {
+            return res.status(200).json({
+                sucess: true,
+                error: false,
+                data: singleUserView,
+                message: 'User viewed sucessfully'
+            })
+        } else {
+            return res.status(400).json({
+                sucess: false,
+                error: true,
+                message: 'User cannot viwed'
+            })
+        }
+    } catch (error) {
+        console.log(error);
+
+        res.status(500).json({
+            succes: false,
+            error: true,
+            message: 'internal server error',
+            errorMessage: error
+        })
+    }
+})
+
 // ************** VIEW USER PROFILE *****************
 
 adminRoutes.get('/admin_userview_profile', async (req, res) => {

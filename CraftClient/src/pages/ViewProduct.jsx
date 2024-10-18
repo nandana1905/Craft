@@ -52,22 +52,22 @@ export default function ViewProduct() {
 
     }, [checkWishlist])
 
-    const product_edit = (productId) => {
+    // const product_edit = (productId) => {
 
-        navigate(`/editproduct/${productId}`)
+    //     navigate(`/editproduct/${productId}`)
 
-    }
+    // }
 
-    const product_delete = (productId) => {
-        axios.post(`http://localhost:3005/api/product/delete_product/${productId}`).then((res) => {
-            console.log('res====>', res.data.message);
-            toast.success(res.data.message)
+    // const product_delete = (productId) => {
+    //     axios.post(`http://localhost:3005/api/product/delete_product/${productId}`).then((res) => {
+    //         console.log('res====>', res.data.message);
+    //         toast.success(res.data.message)
 
-        }).catch((error) => {
-            console.log('error====>', error);
-            toast.error(error.response.data.message)
-        })
-    }
+    //     }).catch((error) => {
+    //         console.log('error====>', error);
+    //         toast.error(error.response.data.message)
+    //     })
+    // }
 
     const addCart = (id) => {
 
@@ -149,22 +149,17 @@ export default function ViewProduct() {
                 <div className='viewproduct'>
 
                     {Category == 'All' ?
-                        viewproduct.map((value, index) => (
+
+                        viewproduct.filter((data)=>{return data.status=='Approved'}).map((value, index) => 
+                            
+                            (
 
                             <div className="card-product-view" data-aos="zoom-out-up">
 
                                 <div className='product-img'>
                                     <img src={value.product_img} style={{ borderRadius: '15px' }} alt="" height={400} width={400} />
                                     <div className='viewproduct-icon'>
-                                        {/* {wishlistProduct.filter((data) => {
-                        return data.productId === value._id
-                    })[0] ?
 
-                        <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: '#ff0000' }}> </i>
-                        :
-                        <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: 'black' }}> </i>
-
-                    } */}
 
                                         <i onClick={() => { addWishlist(value._id) }} class="fa-regular fa-heart i-viewproduct" style={{ fontSize: "210%", color: 'black' }}> </i>
                                     </div>
@@ -199,10 +194,12 @@ export default function ViewProduct() {
                                 </div>
                             </div>
 
-                        )) :
+                        )
+                    
+                    ) :
 
-                        viewproduct.filter((data) => { return Category == data.category })[0] ?
-                            viewproduct.filter((data) => { return Category == data.category }).map((value, index) => (
+                    viewproduct.filter((data)=>{return data.status=='Approved' && Category == data.category})[0] ?
+                    viewproduct.filter((data)=>{return data.status=='Approved' && Category == data.category}).map((value, index) => (
 
                                 <div className="card-product-view">
 

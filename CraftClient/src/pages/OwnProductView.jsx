@@ -70,7 +70,7 @@ export default function OwnProductView() {
                             <div className="card-ownproduct">
 
                                 <div className="card-ownproduct-img">
-                                    <img src={value.product_img} alt="" height={'250px'} width={'350px'} />
+                                    <img src={value.product_img} alt="" height={'250px'} width={'350px'} style={{marginTop:'5%'}} />
                                     <h2 className='ownproduct-h2'>{value.product_name}</h2>
                                 </div>
 
@@ -81,6 +81,7 @@ export default function OwnProductView() {
                                     <p>Rs.{value.price}</p>
                                     <p>{value.quantity}</p>
                                     <p>{value.category}</p>
+                                    <p>Status : {value.status}</p>
 
                                 </div>
 

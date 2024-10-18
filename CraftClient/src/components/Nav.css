@@ -37,18 +37,30 @@
 
 
 
-@media only screen and (max-width: 372px) {
+@media only screen and (max-width: 373px) {
     .navbar {
-        width: 150%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around
+        display: block;
+        width: 180%;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
     }
 
     .navbar ul li a {
-        text-decoration: none;
-        color: black;
-        text-transform: uppercase;
+        font-size: 14px;
+        padding: 10px;
+        display: block;
+        width: 100%;
     }
-    
+
+    .navbar ul li ::after {
+        bottom: -5px;
+    }
 }

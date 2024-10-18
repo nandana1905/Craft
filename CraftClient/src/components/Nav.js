@@ -11,11 +11,7 @@ export default function Nav() {
 
 
     useEffect(() => {
-
-
         setRole(userRole)
-
-
     })
 
     console.log('role==>', role);

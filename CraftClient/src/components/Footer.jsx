@@ -38,7 +38,7 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </div>
-                        
+
                         <div className="footer-col">
                             <h4 className="footer-h4">get help</h4>
                             <ul className="footer-ul">
@@ -69,20 +69,20 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </div>
-    
+
                         <div className="footer-col">
                             <h4 className="footer-h4">follow us</h4>
                             <div className="social-links">
-                                <a href="#" className="footer-a">
+                                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="footer-a">
                                     <i className="fab fa-facebook-f" />
                                 </a>
-                                <a href="#" className="footer-a">
+                                <a href="https://twitter.com" target="_blank" rel="noreferrer" className="footer-a">
                                     <i className="fab fa-twitter" />
                                 </a>
-                                <a href="#" className="footer-a">
+                                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="footer-a">
                                     <i className="fab fa-instagram" />
                                 </a>
-                                <a href="#" className="footer-a">
+                                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="footer-a">
                                     <i className="fab fa-linkedin-in" />
                                 </a>
                             </div>

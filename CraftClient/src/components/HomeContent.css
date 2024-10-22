@@ -9,6 +9,7 @@
 
 .homecontent-h2 {
     font-weight: 700;
+    margin: 5%;
     font-size: 30px;
     color: black;
     margin-bottom: 20px;
@@ -119,17 +120,11 @@
     }
 
     .homecontent-h2 {
-        font-weight: 700;
-        font-size: 30px;
-        color: black;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        text-transform: uppercase;
         text-align: center;
-        margin: 0 auto;
-        padding: 20px 0;
-
+        margin-left: 5%;
+        width: 180%;
+        margin-bottom: 3%;
+        font-size: 45px;
     }
 
     .homecontent-contianer .homecontent-block .homecontent-content p {

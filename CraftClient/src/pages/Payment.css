@@ -49,7 +49,7 @@
 @media(max-width:768px) {
     .card-body {
         padding: 0 1rem 1rem 1rem;
-        background-image: url();
+        
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;

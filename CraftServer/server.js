@@ -9,6 +9,7 @@ const commonRoutes = require('./src/Routes/commonRoutes');
 const adminRoutes = require('./src/Routes/adminRoutes');
 const cartRoutes = require('./src/Routes/cartRoutes');
 const wishlistRoutes = require('./src/Routes/wishlistRoutes');
+const orderRoutes = require('./src/Routes/orderRoutes');
 
 
 const app = express()
@@ -29,8 +30,9 @@ app.use('/api/user', userRoutes)
 app.use('/api/product', produtRoutes)
 app.use('/api/common', commonRoutes)
 app.use('/api/admin', adminRoutes)
-app.use('/api/cart',cartRoutes)
-app.use('/api/wishlist',wishlistRoutes)
+app.use('/api/cart', cartRoutes)
+app.use('/api/wishlist', wishlistRoutes)
+app.use('/api/order', orderRoutes)
 
 
 app.set("views", "./src/Views/")

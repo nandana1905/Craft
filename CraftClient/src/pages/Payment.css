@@ -359,3 +359,8 @@ input[type=checkbox] {
 .input_field[type="number"] {
     -moz-appearance: textfield;
 }
+
+
+@media screen and (max-width:373px){
+    
+}

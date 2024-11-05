@@ -116,7 +116,7 @@
     
     .footer {
 
-        width: 190%;
+        width: 100%;
     }
 
     .container-footer {
@@ -127,12 +127,12 @@
         left: 41%;
     }
     .footer-col .footer-h4 {
-        font-size: 30px;
+        font-size: 22px;
         
     }
 
     .footer-col .footer-ul .footer-li .footer-a {
-        font-size: 25px;
+        font-size: 18px;
         
     }
 

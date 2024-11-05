@@ -73,7 +73,7 @@
 @media screen and (max-width: 374px) {
 
     .headernavbar {
-        width: 190%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: end;
@@ -82,12 +82,12 @@
 
     .headernavbar .i {
         color: black;
-        font-size: 30px;
+        font-size: 16px;
     }
 
     .logout-button {
         text-transform: uppercase;
-        font-size: 30px;
+        font-size: 16px;
 
     }
 

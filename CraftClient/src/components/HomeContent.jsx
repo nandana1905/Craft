@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './HomeContent.css'
 import { useNavigate } from 'react-router-dom';
+import AOS from 'aos'
 
 export default function HomeContent() {
 
@@ -21,19 +22,25 @@ export default function HomeContent() {
 
     }
 
+    useEffect(() => {
+
+        AOS.init();
+
+    }, [])
+
     return (
         <div>
 
-           
+
 
             <div className='homecontent-body'>
                 <div className="homecontent-contianer">
                     <h2 className='homecontent-h2'>Popular Categories</h2>
                     <div className="homecontent-block" >
-                        <div className="homecontent-img">
+                        <div className="homecontent-img" data-aos="flip-left">
                             <img src="/img/pottery1.jpg" alt="" />
                         </div>
-                        <div className="homecontent-content">
+                        <div className="homecontent-content" data-aos="fade-left">
                             <h5>pottery artwork</h5>
                             <p>
                                 Pottery art is a craft which involves transforming raw clay into functional and decorative
@@ -45,10 +52,10 @@ export default function HomeContent() {
                         </div>
                     </div>
                     <div className="homecontent-block">
-                        <div className="homecontent-img">
-                            <img src="/img/artwork1.jpg" alt=""  className='artwork-img'/>
+                        <div className="homecontent-img" data-aos="flip-right">
+                            <img src="/img/artwork1.jpg" alt="" className='artwork-img' />
                         </div>
-                        <div className="homecontent-content">
+                        <div className="homecontent-content" data-aos="fade-right">
                             <h5> artwork</h5>
                             <p>
                                 A painting, sculpture, photograph or mixed media form the broad umbrella of artistry that
@@ -60,10 +67,10 @@ export default function HomeContent() {
                         </div>
                     </div>
                     <div className="homecontent-block">
-                        <div className="homecontent-img">
+                        <div className="homecontent-img" data-aos="flip-left">
                             <img src="/img/glassart1.jpg" alt="" />
                         </div>
-                        <div className="homecontent-content">
+                        <div className="homecontent-content" data-aos="fade-left">
                             <h5>glass artwork</h5>
                             <p>
                                 Glass artwork can be both useful and ornamental ranging from beautiful dishware or flower
@@ -75,10 +82,10 @@ export default function HomeContent() {
                         </div>
                     </div>
                     <div className="homecontent-block">
-                        <div className="homecontent-img">
+                        <div className="homecontent-img" data-aos="flip-right">
                             <img src="/img/embroideryart1.jpg" alt="" />
                         </div>
-                        <div className="homecontent-content">
+                        <div className="homecontent-content" data-aos="fade-right">
                             <h5>Embroidery artwork</h5>
                             <p>
                                 Embroidery artwork involves creating intricate designs by stitching patterns onto
@@ -91,10 +98,10 @@ export default function HomeContent() {
                         </div>
                     </div>
                     <div className="homecontent-block">
-                        <div className="homecontent-img">
+                        <div className="homecontent-img" data-aos="flip-left">
                             <img src="/img/woodart1.jpg" alt="" className='woodart-img' />
                         </div>
-                        <div className="homecontent-content">
+                        <div className="homecontent-content" data-aos="fade-left">
                             <h5>Woodworking</h5>
                             <p>
                                 Woodworking is the craft of creating items from wood using tools like saws, chisels, and sanders.
@@ -109,7 +116,7 @@ export default function HomeContent() {
 
             </div>
 
-      
+
 
         </div>
     )

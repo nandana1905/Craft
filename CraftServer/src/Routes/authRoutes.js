@@ -71,8 +71,6 @@ authRoutes.post('/user_register', upload.single('user_img'), async (req, res) =>
             }
             console.log('data===>', data);
 
-
-
             const regsiter = await userSchema(data).save()
 
             console.log("register==>", regsiter);

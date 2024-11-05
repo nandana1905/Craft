@@ -25,7 +25,7 @@ export default function Register() {
         event.preventDefault()
 
         if (!validation()) {
-            console.log('error===>');
+            console.log('error===>',error);
             return;
         }
 
@@ -85,11 +85,9 @@ export default function Register() {
             errorMessage.phone = 'Invalid phone number'
         } else if (+registertext.phone.length < 10 || +registertext.phone.length > 10) {
             errorMessage.phone = 'Phone number must have 10 digit'
+
         } if (!registertext.password.trim())
             errorMessage.password = 'Password is required'
-
-
-
 
         setError(errorMessage);
         return Object.keys(errorMessage).length === 0;
@@ -99,7 +97,6 @@ export default function Register() {
         const name = event.target.name
         const value = event.target.value
         setResgistertext({ ...registertext, [name]: value })
-
     }
 
 

@@ -40,7 +40,7 @@
 @media only screen and (max-width: 373px) {
     .navbar {
         display: block;
-        width: 180%;
+        width: 100%;
         text-align: center;
     }
 

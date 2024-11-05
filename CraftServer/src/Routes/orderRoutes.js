@@ -9,7 +9,7 @@ const orderRoutes = express.Router()
 
 // ************ CART ADD PRODUCT ORDER *************
 
-orderRoutes.post('cart_addProduct_order/:id', async (req, res) => {
+orderRoutes.post('/cart_addProduct_order/:id', async (req, res) => {
     try {
 
         const id = req.params.id
@@ -50,6 +50,12 @@ orderRoutes.post('cart_addProduct_order/:id', async (req, res) => {
         })
     }
 })
+
+// ************* MY ORDER **************
+
+
+
+
 
 
 

@@ -30,7 +30,7 @@ export default function Login() {
         event.preventDefault()
 
         if (!validation()) {
-            console.log('error===>');
+            console.log('error===>',error);
             return;
         }
 

@@ -5,6 +5,7 @@ import './AdminViewProduct.css'
 import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import AOS from 'aos'
 
 
 export default function AdminViewProduct() {
@@ -26,6 +27,10 @@ export default function AdminViewProduct() {
 
         })
 
+    }, [])
+
+    useEffect(() => {
+        AOS.init();
     }, [])
 
     const ReadMore = (loginId) => {
@@ -89,7 +94,7 @@ export default function AdminViewProduct() {
 
                 {adminviewproduct.map((value, index) => (
 
-                    <div className="card-admin-product-view">
+                    <div className="card-admin-product-view" data-aos="zoom-in-up">
 
                         <div className="card-image-container">
                             <img src={value.product_img} height={'275'} width={'400'} />

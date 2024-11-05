@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import HeaderNav from '../components/HeaderNav';
 import Nav from '../components/Nav';
+import AOS from 'aos'
 
 export default function AdminUserProfile() {
 
@@ -20,6 +21,10 @@ export default function AdminUserProfile() {
 
         })
 
+    }, [])
+
+    useEffect(() => {
+        AOS.init();
     }, [])
 
     const userApprove = (loginId) => {
@@ -115,7 +120,7 @@ export default function AdminUserProfile() {
 
                 {viewuser.map((value, index) => (
 
-                    <div class="user-card">
+                    <div class="user-card" data-aos="fade-right">
 
                         <div class="profile-pic">
                             <img src={value.user_img} alt="" height={400} width={400} />

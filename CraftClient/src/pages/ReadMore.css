@@ -185,7 +185,7 @@
     text-align: center;
 }
 
-@media screen and (max-width:372px) {
+@media screen and (max-width:373px) {
 
     .card-adminproduct {
         width: 100vw;
@@ -209,4 +209,23 @@
         margin-bottom: 6%;
     }
 
+    
+.card-admin-userproduct-view {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 10%;
 }
+
+}
+
+

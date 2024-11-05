@@ -156,3 +156,15 @@
     transition-delay: 0.4s;
     color: aliceblue;
 }
+
+
+@media screen and (max-width:373px) {
+
+    .card-admin-product-view {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 480px;
+    }
+
+}

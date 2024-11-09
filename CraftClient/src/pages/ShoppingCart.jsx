@@ -105,7 +105,7 @@ export default function ShoppingCart() {
                 <Nav />
             </div>
             <div className="wrapper">
-                <h1>Shopping Cart</h1>
+                <h1>My Cart</h1>
 
                 {viewcart.map((value, index) => (
 
